@@ -1,7 +1,7 @@
 node {
     def app
     stage('Clone repository') {
-        checkout scm
+        checkout dev
     }
     stage('Build image') {
        app = docker.build("imdat1/kiii-jenkins")
