@@ -1,11 +1,6 @@
 node {
     def app
     stage('Clone repository') {
-        when {
-            expression {
-                return env.BRANCH_NAME == 'dev'
-            }
-        }
         checkout scm
     }
     stage('Build image') {
