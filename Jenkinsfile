@@ -6,7 +6,7 @@ node {
                 return env.BRANCH_NAME == 'dev'
             }
         }
-        checkout dev
+        checkout scm
     }
     stage('Build image') {
        app = docker.build("imdat1/kiii-jenkins")
